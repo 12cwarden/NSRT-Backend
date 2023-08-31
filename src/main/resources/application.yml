@@ -1,0 +1,15 @@
+spring:
+  profiles:
+    active:
+      - "@profileActive@"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - "*"
+server:
+  error:
+    include-stacktrace: never
+

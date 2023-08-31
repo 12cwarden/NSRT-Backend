@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:h2:~/test  #Test db
+    username: sa
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    #    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: create #Specifies who Hibernate should act w database.
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+server:
+  error:
+    include-stacktrace: never
+
+amazonProperties:
+  accessKey: ${ACCESS_KEY}
+  secretKey: ${SECRET_KEY}
+  bucketName: ${BUCKET_NAME}
